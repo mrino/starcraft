@@ -16,6 +16,16 @@
             console.log("hello");
         })
 
+
+        $("#drone").click(function() {
+            console.log("침 발사"); 
+            $("#spit").fadeIn();
+            $("#spit").animate({left: '+=250'})
+            $("#spit").fadeOut();
+            $("#spit") .css({left:'150px'});
+            hp = hp -1;
+            $("#hp").text("HP: " + hp);
+        });
         
     </script>
 </body>
