@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Starcraft</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <textarea name="" id="content">jquery 기초</textarea>
+    <button id="click" onclick="hello();">클릭</button>
+    <button id="click2">클릭</button>
+    <script>
+        function hello(){
+            console.log("hello2");
+        }
+        $("#click2").click(hello);
+        console.log($("#content").val());
+    </script>
+</body>
+</html>
