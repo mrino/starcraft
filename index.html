@@ -11,7 +11,24 @@
     <div class="background">
         <img id="drone" src="images/drone.png" alt="drone" >
         <img id="spit" src="images/spit.png" alt="spit">
-        <img ids="bunker" src="images/bunker.png" alt="bunker">
+        <img id="bunker" src="images/bunker.png" alt="bunker">
     </div>
+    <script>
+        let hp = 3;
+        
+        $("#drone").click(function() {
+            console.log("침 발사"); 
+            $("#spit").fadeIn();
+            $("#spit").animate({left: '+=250'})
+            $("#spit").fadeOut(function () {
+                hp--;
+                $("#hp").text("HP: " + hp);
+                if(hp == 0){
+                    $("#bunker").fadeOut();
+                }
+            });
+            $("#spit") .css({left:'150px'});
+        });
+    </script>
 </body>
 </html>
